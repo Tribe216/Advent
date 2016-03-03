@@ -54,7 +54,7 @@ stats = load_up_dict('day_15_input.txt.bak')
 top_score = {'score': 0}
 for c in ingredient_combo_generator(stats):
     sc = get_score_of_combo(stats, c)
-    if sc['score'] > top_score['score'] and sc['cals'] == 500:
+    if sc['score'] > top_score['score']:
         top_score = sc
 
 print top_score
