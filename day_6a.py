@@ -25,9 +25,7 @@ def modify_range(start, end, command):
 
 def process_line(in_line):
     in_line = in_line.rstrip().replace(' through ', ',').replace(' ', ',')
-    # print in_line
     spl = in_line.split(',')
-    # print spl
 
     command = spl[-5]
     start_pos = [int(spl[-4]), int(spl[-3])]
@@ -42,6 +40,3 @@ for line in in_file.readlines():
     process_line(line)
 
 print count_on()
-
-
-
